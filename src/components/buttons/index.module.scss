@@ -1,0 +1,66 @@
+@import '/src/styles/index.scss';
+
+.button {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20.3px;
+    transition: transform 0.2s;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.7;
+
+        &:hover {
+            transform: none;
+        }
+    }
+}
+
+.outline {
+    background-color: transparent;
+
+    &.orange {
+        color: #EB5017;
+        border: 1px solid #EB5017;
+    }
+
+    &.red {
+        color: #CC400C;
+        border: 1px solid #CC400C;
+    }
+}
+
+.solid {
+    border: none;
+
+    &.orange {
+        background-color: #EB5017;
+        color: #FFF;
+    }
+
+    &.red {
+        background-color: #D42620;
+        color: #FFF;
+    }
+}
+
+.text {
+    border: none;
+    background-color: transparent;
+
+    &.orange {
+        color: #EB5017;
+    }
+
+    &.red {
+        color: #D42620;
+    }
+}

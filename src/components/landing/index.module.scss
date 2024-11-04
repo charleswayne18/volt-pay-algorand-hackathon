@@ -1,0 +1,220 @@
+@import '/src/styles/index.scss';
+
+.container {
+  padding: 48px 80px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.text_section {
+  padding: 48px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border-radius: 24px;
+  border: 0.5px solid #eb501733;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+
+  h4 {
+    margin: 0;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 67.2px;
+    letter-spacing: -2%;
+    text-align: center;
+    color: #1d2739;
+    margin-bottom: 16px;
+    width: 534px;
+  }
+
+  p {
+    margin: 0;
+    width: 534px;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20.3px;
+    text-align: center;
+    color: #667185;
+    margin-bottom: 24px;
+  }
+
+  button {
+    border: none;
+    padding: 16px 24px;
+    border-radius: 8px;
+    background-color: #eb5017;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+
+    &:hover {
+      background-color: #ff6a2d;
+    }
+  }
+}
+
+.overlay_one,
+.overlay_two {
+  height: 789.52px;
+  width: 789.52px;
+  opacity: 0.07;
+  position: absolute;
+  top: -18.76px;
+  background-color: #eb5017;
+  filter: blur(321.3999938964844px);
+}
+
+.overlay_one {
+  left: -631.98px;
+}
+
+.overlay_two {
+  right: -631.98px;
+}
+
+.interact {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.interact_card {
+  flex: 1;
+  height: 278px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+
+  .icon {
+    align-self: flex-end;
+    transition: ease-in-out 0.3s;
+  }
+
+  .text {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: fit-content;
+    position: relative;
+
+    &:hover {
+      h4 {
+        font-weight: 800;
+      }
+
+      svg {
+        transform: rotate(-45deg);
+      }
+    }
+
+    h4 {
+      margin: 0;
+      font-family: Inter;
+      font-weight: 600;
+      font-size: 28px;
+      // line-height: 30px;
+      letter-spacing: -2%;
+      color: #1d2739;
+      transition: ease-in-out 0.3s;
+    }
+
+    svg {
+      width: 30px;
+      height: 30px;
+      color: #000000;
+      transition: ease-in-out 0.3s;
+      position: absolute;
+    }
+  }
+
+  &:hover {
+    .icon {
+      svg path {
+        fill: #e7f6ec;
+      }
+    }
+    .text {
+      h4 {
+        color: #e7f6ec;
+      }
+      svg {
+        color: #e7f6ec;
+      }
+    }
+  }
+
+  &.airtime {
+    transition: ease-in-out 0.3s;
+    background-color: #fef6e7;
+
+    .text svg {
+      left: 170px;
+    }
+
+    &:hover {
+      background-color: #ee9f17;
+    }
+  }
+
+  &.data {
+    transition: ease-in-out 0.3s;
+    background-color: #ffece5;
+
+    .text svg {
+      left: 140px;
+    }
+
+    &:hover {
+      background-color: #f56630;
+    }
+  }
+
+  &.bill {
+    transition: ease-in-out 0.3s;
+    background-color: #e7f6ec;
+    position: relative;
+    cursor: pointer;
+  
+    .text svg {
+      left: 120px;
+    }
+
+    &:hover {
+      background-color: #0f973d;
+
+      .coming_soon {
+        display: flex;
+      }
+    }
+
+    .coming_soon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 24px;
+      font-weight: 600;
+      font-family: Inter;
+      display: none;
+    }
+  }
+}

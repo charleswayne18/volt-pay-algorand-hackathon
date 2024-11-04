@@ -1,0 +1,48 @@
+@import '/src/styles/index.scss';
+
+.wrapper {
+    width: 544px;
+    background-color: #FFF;
+    border-radius: 16px;
+    padding: 20px 24px 18px;
+    font-family: Inter;
+    display: flex;
+    flex-direction: column;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 33px;
+
+    h4 {
+        margin: 0;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 20px;
+        color: #1D2739;
+    }
+
+    svg {
+        height: 24;
+        width: 24px;
+        cursor: pointer;
+        color: #98A2B3;
+    }
+}
+
+.content {
+    font-size: 16px;
+    line-height: 19.36px;
+    font-weight: 400;
+    color: #1D2739;
+    margin-bottom: 33px;
+}
+
+.buttons {
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

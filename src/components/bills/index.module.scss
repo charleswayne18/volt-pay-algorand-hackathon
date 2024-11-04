@@ -1,0 +1,72 @@
+@import '/src/styles/index.scss';
+
+.container {
+  padding: 127px 170px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 17px;
+  gap: 20px;
+  width: 375px;
+}
+
+.buttons {
+  align-self: flex-end;
+}
+
+.base {
+    margin-top: 23px;
+    font-family: Inter;
+
+    h4 {
+        margin-bottom: 16px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        color: #101928;
+    }
+
+    .options {
+        display: flex;
+        gap: 16px;
+
+        .option {
+            height: 158px;
+            width: 260.5px;
+            border-radius: 6px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+
+            p {
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 26.1px;
+            }
+
+            svg {
+                width: 72px;
+                height: 72px;
+            }
+
+            &.electricity {
+                background-color: #FEFAF1;
+                color: #EBA01F;
+            }
+
+            &.tv {
+                background-color: #EDF7F1;
+                color: #086D2A;
+            }
+        }
+    }
+}

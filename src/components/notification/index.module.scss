@@ -1,0 +1,84 @@
+@import '/src/styles/index.scss';
+
+.wrapper {
+    position: fixed;
+    top: 64px;
+    right: 54px;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: all 0.8s ease;
+}
+
+.notification {
+    width: 384px;
+    border-radius: 4px;
+    background-color: #FFF;
+    border: 1px solid #E4E7EC;
+    border-left: 6px solid #04802E;
+    padding: 12px 16px;
+    display: flex;
+
+    animation: slideIn 0.8s ease;
+
+    &.success {
+        border-left-color: #04802E;
+    }
+
+    &.error {
+        border-left-color: #CB1A14;
+    }
+
+    .icon {
+        margin-right: 12px;
+    }
+
+    .content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        font-family: Inter;
+        font-size: 14px;
+
+        h4 {
+            margin: 0;
+            font-weight: 600;
+            line-height: 20.3px;
+            color: #101928;
+        }
+
+        p {
+            margin: 0;
+            line-height: 20px;
+            color: #475367;
+            font-weight: 400;
+        }
+    }
+
+    .close {
+        display: flex;
+        flex-direction: column;
+        width: 33px;
+        align-items: flex-end;
+        border-left: 1px solid #F0F2F5;
+
+        svg {
+            height: 12px;
+            width: 12px;
+            cursor: pointer;
+            color: #000;
+        }
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-300%);
+    }
+    to {
+        transform: translateY(0);
+    }
+    
+}

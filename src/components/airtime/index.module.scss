@@ -1,0 +1,17 @@
+@import '/src/styles/index.scss';
+
+.container {
+  padding: 127px 170px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 17px;
+  gap: 20px;
+  width: 375px;
+}
+
+.buttons {
+  align-self: flex-end;
+}

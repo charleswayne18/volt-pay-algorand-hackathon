@@ -1,0 +1,113 @@
+@import '/src/styles/index.scss';
+
+.wrapper {
+    padding: 80px 80px 48px;
+    font-family: Inter;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    .title {
+        h2 {
+            margin-bottom: 4px;
+            color: #101928;
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 33.6px;
+        }
+
+        p {
+            margin: 0;
+            color: #667185;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22.4px;
+        }
+    }
+
+    .tabs {
+        display: flex;
+        align-self: flex-end;
+
+        .tab {
+           padding: 16px;
+           border-bottom: 2px solid #E4E7EC; 
+           cursor: pointer;
+
+              &.active {
+                border-bottom: 2px solid #F56630;
+              }
+        }
+    }
+}
+
+.empty_state {
+    width: 100%;
+    height: 697px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #E4E7EC;
+    border-radius: 16px;
+    font-family: Inter;
+
+    h4 {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 34.8px;
+        color: #000000;
+        margin: 0;
+        margin-bottom: 4px;
+    }
+
+    p {
+        margin: 0;
+        width: 342px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 23.2px;
+        color: #475367;
+        text-align: center;
+    }
+}
+
+.bill_tabs {
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 24px;
+
+    .tab {
+        width: 99px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #D0D5DD;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: #475367;
+        cursor: pointer;
+
+
+        &:first-child {
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+        }
+
+        &:last-child {
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+
+        &.active {
+            border: none;
+            background-color: #F56630;
+            color: #FFF;
+        }
+    }
+}
