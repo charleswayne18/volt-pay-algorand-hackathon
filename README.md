@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Voltpay Frontend
+
+Voltpay is a decentralized application built on the Algorand blockchain that enables users to purchase airtime, buy data, and pay bills seamlessly using Algos.
+
+## Technical Overview
+
+Voltpay operates on three primary layers:
+1. *Frontend Layer* - This repository contains the code for the Next.js frontend.
+2. *Smart Contract Layer* - Built using TealScript, the smart contracts are compiled and stored in the src/contracts folder of this repository. For more details, check the [Voltpay Smart Contract repository](https://github.com/charleswayne18/volt-pay-smart-contract).
+3. *Backend Layer* - This layer, developed with NestJS, interacts with the blockchain to process transactions and integrates third-party APIs. The backend code is hosted at the [Voltpay Backend repository](https://github.com/EagleCharles/volt-pay-backend).
 
 ## Getting Started
 
-First, run the development server:
+To set up and run the frontend application, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- *Node.js* (version 18+)
+- An *Algorand wallet* (Pera Wallet recommended)
+- Testnet Algos, which can be obtained from the [Algorand Testnet Dispenser](https://bank.testnet.algorand.network/)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Running the Backend Server
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+First, clone and run the backend server, which is essential for the frontend to function properly. Follow the setup instructions provided in the [Voltpay Backend repository](https://github.com/EagleCharles/volt-pay-backend).
 
-## Learn More
+### Setting Up the Frontend Server
 
-To learn more about Next.js, take a look at the following resources:
+1. *Clone the Repository*  
+   bash
+   git clone https://github.com/charleswayne18/volt-pay-algorand-hackathon
+   cd volt-pay-algorand-hackathon
+   
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. *Install Dependencies*  
+   bash
+   npm install
+   
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. *Configure Environment Variables*  
+   Create a .env.local file in the project root and set up necessary environment variables, including API endpoints and Algorand wallet configurations. Use the provided .env.example file as a reference.
 
-## Deploy on Vercel
+4. *Start the Development Server*  
+   bash
+   npm run dev
+   
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   The app should now be running locally at http://localhost:3000.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Testing the Application
+
+1. *Ensure Testnet Algos* are available in your wallet.
+2. *Connect your wallet* (Pera Wallet recommended) and select the Testnet network.
+3. *Interact with the app* by attempting test transactions to buy airtime, purchase data, or pay bills.
+
+## Additional Resources
+
+For more details on the smart contracts or backend APIs, refer to the respective repositories:
+- [Smart Contract Repository](https://github.com/charleswayne18/volt-pay-smart-contract)
+- [Backend Repository](https://github.com/EagleCharles/volt-pay-backend)
+
+--- 
+
+With these steps, Voltpay’s frontend should be up and running, enabling you to explore its features and simulate Algorand transactions in a test environment.
